@@ -114,26 +114,14 @@ function updateFooterDates() {
   }
 }
 
-// 6. Custom mouse cursor effect (bonus)
+// 6. Custom mouse cursor effect (updated: minimal accent ring)
 function enableCustomCursor() {
   // Create cursor element
   const cursor = document.createElement('div');
   cursor.id = 'custom-cursor';
   document.body.appendChild(cursor);
 
-  // Style the cursor via JS for fallback, but main style in CSS
-  cursor.style.position = 'fixed';
-  cursor.style.top = '0';
-  cursor.style.left = '0';
-  cursor.style.width = '18px';
-  cursor.style.height = '18px';
-  cursor.style.borderRadius = '50%';
-  cursor.style.background = 'rgba(0,119,255,0.10)';
-  cursor.style.border = '2px solid var(--accent)';
-  cursor.style.pointerEvents = 'none';
-  cursor.style.zIndex = '9999';
-  cursor.style.transform = 'translate(-50%, -50%)';
-  cursor.style.transition = 'background 0.2s, border-color 0.2s, transform 0.08s';
+  // Style is now handled by CSS
 
   // Move cursor
   document.addEventListener('mousemove', (e) => {
@@ -142,19 +130,15 @@ function enableCustomCursor() {
   });
 
   // Interactive elements
-  const interactiveSelectors = 'a, button, .project-card, input, textarea, label';
+  const interactiveSelectors = 'a, button, .project-split-card, input, textarea, label';
   document.addEventListener('mouseover', (e) => {
     if (e.target.closest(interactiveSelectors)) {
-      cursor.style.background = 'rgba(0,119,255,0.18)';
-      cursor.style.borderColor = 'var(--accent)';
-      cursor.style.transform = 'translate(-50%, -50%) scale(1.25)';
+      document.body.setAttribute('data-cursor-hover', 'true');
     }
   });
   document.addEventListener('mouseout', (e) => {
     if (e.target.closest(interactiveSelectors)) {
-      cursor.style.background = 'rgba(0,119,255,0.10)';
-      cursor.style.borderColor = 'var(--accent)';
-      cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+      document.body.removeAttribute('data-cursor-hover');
     }
   });
 
