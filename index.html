@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalist Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header">
+    <div class="container nav-container">
+      <div class="logo">JM</div>
+      <nav>
+        <ul>
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="mode-toggle" aria-label="Toggle dark mode"><span class="mode-icon">🌙</span></button>
+    </div>
+  </header>
+  <main>
+    <section id="hero" class="section hero-section">
+      <div class="hero-bg-anim"></div>
+      <div class="container hero-content">
+        <div class="hero-profile-img">
+          <img src="75e20ba7-53fc-4571-b00e-753ac93f3402~1.jpg" alt="Justin Murray Profile Photo" />
+        </div>
+        <h1 class="hero-title">Justin Murray</h1>
+        <p class="hero-tagline">Building beautiful web experiences.<br>Creative Developer & Designer</p>
+        <div class="hero-socials">
+          <a href="#" aria-label="GitHub" class="social-icon"><span>GH</span></a>
+          <a href="#" aria-label="LinkedIn" class="social-icon"><span>LI</span></a>
+          <a href="#" aria-label="Twitter" class="social-icon"><span>TW</span></a>
+        </div>
+        <a href="#projects" class="hero-cta-btn">See My Work</a>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <div class="container about-content">
+        <div class="about-img">
+          <img src="75e20ba7-53fc-4571-b00e-753ac93f3402~1.jpg" alt="Justin Murray Profile Photo" />
+        </div>
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Passionate about web development, UI/UX, and building impactful products.</p>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills & Tech Stack</h2>
+        <div class="skills-grid">
+          <div class="skill-item"><span class="skill-icon">[HTML]</span>HTML5</div>
+          <div class="skill-item"><span class="skill-icon">[CSS]</span>CSS3</div>
+          <div class="skill-item"><span class="skill-icon">[JS]</span>JavaScript</div>
+          <div class="skill-item"><span class="skill-icon">[React]</span>React</div>
+          <div class="skill-item"><span class="skill-icon">[Node]</span>Node.js</div>
+          <div class="skill-item"><span class="skill-icon">[API]</span>REST APIs</div>
+          <div class="skill-item"><span class="skill-icon">[UI]</span>UI/UX</div>
+          <div class="skill-item"><span class="skill-icon">[More]</span>More...</div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-img"><img src="Astrella.png" alt="Astrella Screenshot" /></div>
+            <div class="project-content">
+              <h3>Astrella</h3>
+              <div class="project-tags"><span class="tag">AI</span><span class="tag">Flask</span><span class="tag">Frontend</span></div>
+              <p>Astrella is a personalized AI-powered astrological reading application that generates your "Core Identity" based on your birth data.</p>
+              <div class="project-btns">
+                <a href="https://astrella.onrender.com" target="_blank" class="btn-primary"><span class="btn-icon">🔗</span>Live Demo</a>
+                <a href="https://github.com/sunsetsacoustic/Astrella" target="_blank" class="btn-outline"><span class="btn-icon">🐙</span>GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-img"><img src="https://placehold.co/400x220" alt="Project Screenshot" /></div>
+            <div class="project-content">
+              <h3>Project Two</h3>
+              <div class="project-tags"><span class="tag">React</span><span class="tag">API</span></div>
+              <p>Short description of the project goes here.</p>
+              <div class="project-btns">
+                <a href="#" target="_blank" class="btn-primary"><span class="btn-icon">🔗</span>Live Demo</a>
+                <a href="#" target="_blank" class="btn-outline"><span class="btn-icon">🐙</span>GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-img"><img src="https://placehold.co/400x220" alt="Project Screenshot" /></div>
+            <div class="project-content">
+              <h3>Project Three</h3>
+              <div class="project-tags"><span class="tag">UI/UX</span><span class="tag">Design</span></div>
+              <p>Short description of the project goes here.</p>
+              <div class="project-btns">
+                <a href="#" target="_blank" class="btn-primary"><span class="btn-icon">🔗</span>Live Demo</a>
+                <a href="#" target="_blank" class="btn-outline"><span class="btn-icon">🐙</span>GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <div class="container contact-content">
+        <h2>Contact</h2>
+        <div class="contact-socials">
+          <a href="#" aria-label="Email" class="social-icon"><span>✉️</span></a>
+          <a href="#" aria-label="LinkedIn" class="social-icon"><span>LI</span></a>
+          <a href="#" aria-label="GitHub" class="social-icon"><span>GH</span></a>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <small>© <span id="current-year"></span> Justin Murray <span aria-label="star" title="star">⭐</span>. All rights reserved.</small>
+      <span id="last-updated"></span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 
