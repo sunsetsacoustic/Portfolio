@@ -200,9 +200,26 @@ function enableDarkModeToggle() {
   });
 }
 
+// 9. Mobile nav toggle
+function enableMobileNav() {
+  const navToggle = document.getElementById('nav-toggle');
+  const navContainer = document.querySelector('.nav-container');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  if (!navToggle || !navContainer) return;
+  navToggle.addEventListener('click', () => {
+    navContainer.classList.toggle('nav-open');
+  });
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navContainer.classList.remove('nav-open');
+    });
+  });
+}
+
 // Initialize all features on DOMContentLoaded
 window.addEventListener('DOMContentLoaded', () => {
   enableDarkModeToggle();
+  enableMobileNav();
   enableSmoothScroll();
   highlightNavOnScroll();
   enableProjectCardHover();
